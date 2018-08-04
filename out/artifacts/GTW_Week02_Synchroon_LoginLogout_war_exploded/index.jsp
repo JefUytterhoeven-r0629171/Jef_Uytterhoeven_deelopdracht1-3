@@ -25,6 +25,7 @@
 </c:if> <c:choose>
 	<c:when test="${user!=null}">
 		<p>Welcome ${user.getFirstName()}!</p>
+		<div id="userstatus"> <h3> je huidige status is ${user.getStatus()} </h3></div>
 		<h2>kies jou status</h2>
 		<form>
 			<input id="online" type="radio" name="status" value="online" checked> online<br>
@@ -170,6 +171,40 @@
                     </div>
                 </div>
             </div>
+			<div id="topic6">
+				<div id="titel"><h3>topic6</h3></div>
+				<div id="tekst">
+					orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in pulvinar nunc. Duis pellentesque magna sed quam vehicula maximus. Ut imperdiet sapien vitae massa pharetra, faucibus ultrices enim gravida. Pellentesque eu facilisis est. Vestibulum rutrum euismod enim, vel placerat nisl tristique et. Aenean quis auctor sapien. Curabitur in auctor ex, ac tempus magna. Vestibulum mattis lacus ut dolor tempus sodales. Cras dapibus suscipit sapien ac congue. Curabitur luctus neque felis, nec posuere libero mattis eu. Suspendisse turpis dolor,
+				</div>
+				<div id="comments">
+					<div id="addcomment">
+
+						naam <input type="text" id="cnaam6" name="cnaam6" value="mcgonagall">
+						rating max 10 <input type="number" id="crating6" name="crating6" min="1" max="10" value="10">
+						<button id="button6" type="button" onclick="send(6);" >Send</button>
+					</div>
+					<div id="comments6">
+
+					</div>
+				</div>
+			</div>
+			<div id="topic7">
+				<div id="titel"><h3>topic7</h3></div>
+				<div id="tekst">
+					orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in pulvinar nunc. Duis pellentesque magna sed quam vehicula maximus. Ut imperdiet sapien vitae massa pharetra, faucibus ultrices enim gravida. Pellentesque eu facilisis est. Vestibulum rutrum euismod enim, vel placerat nisl tristique et. Aenean quis auctor sapien. Curabitur in auctor ex, ac tempus magna. Vestibulum mattis lacus ut dolor tempus sodales. Cras dapibus suscipit sapien ac congue. Curabitur luctus neque felis, nec posuere libero mattis eu. Suspendisse turpis dolor,
+				</div>
+				<div id="comments">
+					<div id="addcomment">
+
+						naam <input type="text" id="cnaam7" name="cnaam7" value="mcgonagall">
+						rating max 10 <input type="number" id="crating7" name="crating7" min="1" max="10" value="10">
+						<button id="button7" type="button" onclick="send(7);" >Send</button>
+					</div>
+					<div id="comments7">
+
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<script type="text/javascript">

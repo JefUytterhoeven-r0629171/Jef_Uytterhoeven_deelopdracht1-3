@@ -23,7 +23,7 @@ public class addFriend  extends RequestHandler {
         Person puser = personService.getPerson(user);
         Person pfriend = personService.getPerson(friend);
         puser.addFriend(pfriend);
-
+        
         return "index.jsp";
     }
 

@@ -29,7 +29,9 @@ function changeState() {
 function aplychangedstate() {
     if(xhr.status == 200) {
         if (xhr.readyState == 4) {
-
+            var user = JSON.parse(xhr.responseText);
+            output = '<h3> je huidige status is changed to ' + user.status + '</h3>';
+            document.getElementById("userstatus").innerHTML = output;
         }
     }
 }
