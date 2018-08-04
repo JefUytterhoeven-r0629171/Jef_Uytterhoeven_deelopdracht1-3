@@ -37,7 +37,7 @@
 		</form>
 		<button id="changestatebutton">changestate</button>
 		<h2>dit zijn al jouw vrienden</h2>
-		<div id="friends" ></div>
+		<div id="friends"  ></div>
 
 		<div id="addfrienddiv">
 			<p>
@@ -59,7 +59,7 @@
 		</form>
 		<div id="logedinuserid" style="display: none;">${user.getUserId()}</div>
 		<script>
-           // document.getElementById("logedinuserid").addEventListener('load', viewFriendList)
+            document.getElementById("logedinuserid").addEventListener('load', viewFriendList())
 		</script>
 
 

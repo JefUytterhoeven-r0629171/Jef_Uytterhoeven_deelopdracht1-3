@@ -12,15 +12,19 @@ public class getFriends  extends RequestHandler {
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
         String destination = "index.jsp";
+        ArrayList<Person> friends = new ArrayList<Person>();
 
         PersonService personService = super.getPersonService();
 
         String user = request.getParameter("user");
         Person puser = personService.getPerson(user);
 
+        for(int i =0 ; i< puser.getFriendids().size(); i++){
+            friends.add(personService.getPerson(puser.getFriendids().get(i)));
+        }
 
         try {
-             String personenJSON = this.toJSON(puser.getFriendlist());
+             String personenJSON = this.toJSON(friends);
              response.setContentType("application/json");
             response.getWriter().write(personenJSON);
         } catch (JsonProcessingException e) {
@@ -30,6 +34,8 @@ public class getFriends  extends RequestHandler {
         }
          return "index.jsp";
     }
+
+    /*old friendlist code
     public ArrayList<Person> removeFriendlist(ArrayList<Person> persons){
         ArrayList<Person> nofriends = new ArrayList<>();
         Person test = new Person();
@@ -38,6 +44,10 @@ public class getFriends  extends RequestHandler {
         }
         return nofriends;
     }
+
+    */
+
+    // change object to json
     public String toJSON (ArrayList<Person> persons) throws JsonProcessingException {
        // System.out.print(" \n \n \n"  +"asub1 \n");
         ObjectMapper mapper = new ObjectMapper();

@@ -19,10 +19,12 @@ public class Person {
 	private Role role;
 	private String status;
 	private ArrayList<Person> friendlist ;
+	private ArrayList<String> friendids;
 
 	public Person(String userId, String password, String firstName,
 			String lastName,Role role) {
 		friendlist = new ArrayList<Person>();
+		friendids = new ArrayList<String>();
 		setUserId(userId);
 		setHashedPassword(password);
 		setFirstName(firstName);
@@ -50,6 +52,15 @@ public class Person {
 		friendlist = new ArrayList<Person>();
 
 	}
+
+	public ArrayList<String> getFriendids() {
+		return friendids;
+	}
+
+	public void setFriendids(ArrayList<String> friendids) {
+		this.friendids = friendids;
+	}
+
 	public void setStatus(String status){
 		this.status = status;
 		System.out.print("status werd verandert naar " + this.status);

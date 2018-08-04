@@ -4,7 +4,7 @@ function addFriend() {
     friendsxhr.open("GET", "Controller?action=addFriend&type=assync&user="+document.getElementById("logedinuserid").innerText +"&friend="+document.getElementById("friendsid").value, true);
     friendsxhr.onreadystatechange = testfunctie;
     friendsxhr.send(null);
-    viewFriendList();
+
 }
 function testfunctie() {
     if (friendsxhr.status == 200 && friendsxhr.readyState == 4) {

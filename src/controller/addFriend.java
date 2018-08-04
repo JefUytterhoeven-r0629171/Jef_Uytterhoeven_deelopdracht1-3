@@ -22,8 +22,13 @@ public class addFriend  extends RequestHandler {
                                                                          System.out.print(" \n 4");
         Person puser = personService.getPerson(user);
         Person pfriend = personService.getPerson(friend);
-        puser.addFriend(pfriend);
-        
+
+        puser.getFriendids().add(pfriend.getUserId());
+        pfriend.getFriendids().add(puser.getUserId());
+
+        //old friendlist code
+        //puser.addFriend(pfriend);
+
         return "index.jsp";
     }
 
