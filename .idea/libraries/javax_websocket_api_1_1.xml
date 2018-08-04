@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="javax.websocket-api-1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../javax.websocket-api-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jackson-databind-2.7.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jackson-core-2.7.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jackson-annotations-2.7.0.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../week3" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../week3/Demo5_Ajax_Chat_Push_IntelliJ/Demo5_Ajax_Chat_Push/src" />
+      <root url="file://$PROJECT_DIR$/../../week3/Demo_Push_Files/Demo_Push" />
+      <root url="file://$PROJECT_DIR$/../../week3" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../week3" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../week3" recursive="false" type="SOURCES" />
+  </library>
+</component>
