@@ -26,7 +26,26 @@ function getFriendData() {
 
         //if(xhr2.responseText != null)
         var friends = JSON.parse(friendlist.responseText);
+        var online = 0;
+        var offline = 0;
+        var away = 0;
+        var other = 0;
+        for (var i in friends) {
+            switch (friends[i].status) {
+                case 'online': online++;
+                    break;
+                case 'away': away++;
+                    break;
+                case 'offline': offline++
+                    break;
+                default: other++;
+
+            }
+        }
+
+
         var output;
+        output+= '<h4> there are ' + online + ' online ,' + offline +' offline ,' + away+' away and ' + other +' others in you\'r friendlist';
         for (var i in friends) {
             output +=
                 '<div class="friend" id="friends[i].firstName" >' +
