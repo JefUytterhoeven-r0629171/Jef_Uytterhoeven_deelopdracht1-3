@@ -35,6 +35,7 @@ public class PersonRepositoryStub implements PersonRepository {
 		if(personId == null){
 			throw new IllegalArgumentException("No id given");
 		}
+		System.out.println(persons.size());
 		return persons.get(personId);
 	}
 
@@ -49,7 +50,10 @@ public class PersonRepositoryStub implements PersonRepository {
 		if (persons.containsKey(person.getUserId())) {
 			throw new IllegalArgumentException("User already exists");
 		}
+
+		System.out.println(persons.size()+ "\n" + person.getUserId());
 		persons.put(person.getUserId(), person);
+		System.out.println(persons.size());
 	}
 
 	public void update(Person person){

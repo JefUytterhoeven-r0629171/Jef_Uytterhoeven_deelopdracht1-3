@@ -1,5 +1,7 @@
 package domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -13,12 +15,19 @@ public class Person {
 
 	private String userId;
 	private String password;
+	@JsonIgnore
 	private String salt;
+	private String email;
 	private String firstName;
 	private String lastName;
+	private String geslacht;
+	private int leeftijd;
 	private Role role;
 	private String status;
+
+	@JsonIgnore
 	private ArrayList<Person> friendlist ;
+	@JsonIgnore
 	private ArrayList<String> friendids;
 
 	public Person(String userId, String password, String firstName,
@@ -30,7 +39,7 @@ public class Person {
 		setFirstName(firstName);
 		setLastName(lastName);
 		setRole(role);
-		status = "ofline";
+		status = "offline";
 		friendlist.add(this);
 	}
 
@@ -64,6 +73,30 @@ public class Person {
 	public void setStatus(String status){
 		this.status = status;
 		System.out.print("status werd verandert naar " + this.status);
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getGeslacht() {
+		return geslacht;
+	}
+
+	public void setGeslacht(String geslacht) {
+		this.geslacht = geslacht;
+	}
+
+	public int getLeeftijd() {
+		return leeftijd;
+	}
+
+	public void setLeeftijd(int leeftijd) {
+		this.leeftijd = leeftijd;
 	}
 
 	public String getStatus(){

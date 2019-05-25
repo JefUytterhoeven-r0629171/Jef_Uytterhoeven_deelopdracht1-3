@@ -66,6 +66,7 @@
 
 	</c:when>
 	<c:otherwise>
+		<div id="loginform" style="display: block">
 		<form method="post" action="Controller?action=LogIn">
 			<p>
 				<label for="email">Your email </label>
@@ -76,12 +77,52 @@
 				<input type="password" id="password" name="password" value="t">
 			</p>
 			<p>
-				<input type="submit" id="loginbutton" value="Log in">
+				<input type="submit" id="loginbutton" value="submit Log in">
+				<button id="registerbutton" type="button">get register form</button>
 			</p>
 			<script>
-               // document.getElementById("loginbutton").addEventListener('click', viewFriendList)
+                document.getElementById("registerbutton").addEventListener('click', toggleregister)
 			</script>
 		</form>
+		</div>
+		<div id="registerform" style="display: none">
+			<form method="post" action="Controller?action=register">
+
+				<p>
+					<label for="email">Your email </label>
+					<input type="text" id="email" name="email" value="test@ucll.be">
+				</p>
+				<p>
+					<label for="password">Your password</label>
+					<input type="password" id="password" name="password" value="t">
+				</p>
+				<p>
+					<label for="firstName">Your firstName </label>
+					<input type="text" id="firstName" name="firstName" value="piet">
+				</p>
+				<p>
+					<label for="lastName">Your lastName </label>
+					<input type="text" id="lastName" name="lastName" value="peters">
+				</p>
+				<p>
+					<label for="gender">Your gender </label>
+					<input type="text" id="gender" name="gender" value="male">
+				</p>
+				<p>
+					<label for="age">Your age </label>
+					<input type="number" id="age" name="age" value="25">
+				</p>
+				<p>
+
+					<input type="submit" id="registersubmit" value="submit registration">
+					<button id="loginbuttonswitch" type="button">get log in form</button>
+
+				</p>
+				<script>
+                     document.getElementById("loginbuttonswitch").addEventListener('click', toggleregister)
+				</script>
+			</form>
+		</div>
 	</c:otherwise>
 </c:choose>
 
@@ -171,40 +212,6 @@
                     </div>
                 </div>
             </div>
-			<div id="topic6">
-				<div id="titel"><h3>topic6</h3></div>
-				<div id="tekst">
-					orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in pulvinar nunc. Duis pellentesque magna sed quam vehicula maximus. Ut imperdiet sapien vitae massa pharetra, faucibus ultrices enim gravida. Pellentesque eu facilisis est. Vestibulum rutrum euismod enim, vel placerat nisl tristique et. Aenean quis auctor sapien. Curabitur in auctor ex, ac tempus magna. Vestibulum mattis lacus ut dolor tempus sodales. Cras dapibus suscipit sapien ac congue. Curabitur luctus neque felis, nec posuere libero mattis eu. Suspendisse turpis dolor,
-				</div>
-				<div id="comments">
-					<div id="addcomment">
-
-						naam <input type="text" id="cnaam6" name="cnaam6" value="mcgonagall">
-						rating max 10 <input type="number" id="crating6" name="crating6" min="1" max="10" value="10">
-						<button id="button6" type="button" onclick="send(6);" >Send</button>
-					</div>
-					<div id="comments6">
-
-					</div>
-				</div>
-			</div>
-			<div id="topic7">
-				<div id="titel"><h3>topic7</h3></div>
-				<div id="tekst">
-					orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in pulvinar nunc. Duis pellentesque magna sed quam vehicula maximus. Ut imperdiet sapien vitae massa pharetra, faucibus ultrices enim gravida. Pellentesque eu facilisis est. Vestibulum rutrum euismod enim, vel placerat nisl tristique et. Aenean quis auctor sapien. Curabitur in auctor ex, ac tempus magna. Vestibulum mattis lacus ut dolor tempus sodales. Cras dapibus suscipit sapien ac congue. Curabitur luctus neque felis, nec posuere libero mattis eu. Suspendisse turpis dolor,
-				</div>
-				<div id="comments">
-					<div id="addcomment">
-
-						naam <input type="text" id="cnaam7" name="cnaam7" value="mcgonagall">
-						rating max 10 <input type="number" id="crating7" name="crating7" min="1" max="10" value="10">
-						<button id="button7" type="button" onclick="send(7);" >Send</button>
-					</div>
-					<div id="comments7">
-
-					</div>
-				</div>
-			</div>
 		</div>
 
 		<script type="text/javascript">

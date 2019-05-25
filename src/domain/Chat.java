@@ -11,7 +11,7 @@ public class Chat {
         deelnemers.add(user1);
         deelnemers.add(user2);
         chatId = user1.getUserId() + user2.getUserId();
-        chat.add("dit is een teststring om te zien of de tekst doorkomt in het chatvenster");
+        chat.add("welcome to the chat with " + user1.getFirstName() +" and " + user2.getFirstName());
     }
 
     public String getChatId() {

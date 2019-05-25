@@ -43,6 +43,25 @@ function getUsers() {
 
 }
 
+
+function toggleregister() {
+    var loginform = document.getElementById("loginform");
+    var registerform = document.getElementById("registerform");
+
+    if (registerform.style.display === "none") {
+        console.log("make login none and register block");
+        loginform.style.display = "none";
+        registerform.style.display = "block";
+
+
+    } else {
+        console.log("make register none and login block");
+        loginform.style.display = "block";
+        registerform.style.display = "none";
+    }
+
+}
+
 function getData() {
 
     if(xhr.status == 200){

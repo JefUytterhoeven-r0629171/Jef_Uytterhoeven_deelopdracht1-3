@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3d722674-ae57-4f8b-bb05-2fb1d4c473b1" name="hagelandsetractorvrienden chatapp" url="http://chatapp.hagelandsetractorvrienden.be">
+        <fileTransfer host="chatapp.hagelandsetractorvrienden.be" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

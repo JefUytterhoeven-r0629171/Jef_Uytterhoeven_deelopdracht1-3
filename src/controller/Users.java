@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Users extends RequestHandler {
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
-
+        System.out.print(" \n getperson controller is called");
         String destination = "index.jsp";
         PersonService personService = super.getPersonService();
         try {

@@ -8,6 +8,7 @@ public class PersonService {
 	private PersonRepository personRepository = new PersonRepositoryStub();
 	private ChatRepositoryStub chatRepository = new ChatRepositoryStub();
 	private UitgavenRepositoryStub uitgavenrep = new UitgavenRepositoryStub();
+	private  StudentenRepositoryStub studentenstub = new StudentenRepositoryStub();
 	public PersonService(){
 	}
 
@@ -49,5 +50,13 @@ public class PersonService {
 
 	private PersonRepository getPersonRepository() {
 		return personRepository;
+	}
+
+	public StudentenRepositoryStub getStudentenstub() {
+		return studentenstub;
+	}
+
+	public void setStudentenstub(StudentenRepositoryStub studentenstub) {
+		this.studentenstub = studentenstub;
 	}
 }

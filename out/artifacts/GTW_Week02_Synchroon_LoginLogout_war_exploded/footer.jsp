@@ -5,3 +5,4 @@
 		Leuven-Limburg 
 	</span>		
 </footer>
+</div>
